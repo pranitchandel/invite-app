@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  outline: none;
+  border: 1px solid rgb(216, 216, 216);
+  height: 35px;
+  width: 50%;
+  padding-left: 5px;
+  letter-spacing: 0.5px;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+textarea {
+  max-width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inviteContainer {
   display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  /* margin: auto; */
+  box-shadow: 0 -0.3em 0.3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.summaryClass {
+  padding: 20px;
+  /* background-color: aqua; */
+  width: 40%;
+}
+.formClass {
+  padding: 20px;
+  width: 60%;
+  /* background-color: rgb(153, 206, 206); */
+}
+
+.summaryContents {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 4px;
+}
+.summaryContents span {
+  overflow-wrap: wrap;
+  padding-left: 5px;
+}
+
+.formInput {
+  margin: 15px 0;
+}
+
+.formInput label {
+  font-size: small;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.space {
+  margin-top: 5px;
+}
+form button {
+}
+.addGuestBtn {
+  color: blue;
+  padding: 10px;
+  min-height: 40px;
+  min-width: 50px;
+  font-size: small;
+  background-color: white;
+  border-radius: 20px;
+  border: 1.5px solid rgb(202, 202, 202);
+}
+
+.scheduleBtn {
+  padding: 10px;
+  min-height: 40px;
+  min-width: 50px;
+  background-color: rgb(54, 54, 250);
   color: white;
+  border-radius: 40px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 500px) {
+  input {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  textarea {
+    max-width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+
+  .inviteContainer {
+    width: 96%;
+    flex-direction: column;
+  }
+  .summaryClass {
+    height: 100%;
+    width: 100%;
+  }
+  .formClass {
+    height: 100%;
+    width: 100%;
   }
 }
